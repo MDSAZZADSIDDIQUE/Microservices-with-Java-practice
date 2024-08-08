@@ -27,6 +27,7 @@ public class ProductService {
         return new ProductResponse(product.getId(), product.getName(), product.getDescription(),
                 product.getPrice());
     }
+
     public List<ProductResponse> getAllProducts() {
         return productRepository.findAll()
                 .stream()

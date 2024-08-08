@@ -2,7 +2,6 @@ package com.eternity.shop.controller;
 
 import com.eternity.shop.dto.ProductRequest;
 import com.eternity.shop.dto.ProductResponse;
-import com.eternity.shop.model.Product;
 import com.eternity.shop.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -22,6 +21,7 @@ public class ProductController {
     public ProductResponse createProduct(@RequestBody ProductRequest productRequest) {
         return productService.createProduct(productRequest);
     }
+
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<ProductResponse> getAllProducts() {

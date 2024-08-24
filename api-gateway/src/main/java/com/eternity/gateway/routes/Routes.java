@@ -45,14 +45,14 @@ public class Routes {
 //                .build();
 //    }
 //
-//    @Bean
-//    public RouterFunction<ServerResponse> orderServiceRoute() {
-//        return GatewayRouterFunctions.route("order_service")
-//                .route(RequestPredicates.path("/api/order"), HandlerFunctions.http(orderServiceUrl))
+    @Bean
+    public RouterFunction<ServerResponse> orderServiceRoute() {
+        return GatewayRouterFunctions.route("order_service")
+                .route(RequestPredicates.path("/api/order"), HandlerFunctions.http(orderServiceUrl))
 //                .filter(CircuitBreakerFilterFunctions.circuitBreaker("orderServiceCircuitBreaker",
 //                        URI.create("forward:/fallbackRoute")))
-//                .build();
-//    }
+                .build();
+    }
 //
 //    @Bean
 //    public RouterFunction<ServerResponse> orderServiceSwaggerRoute() {
